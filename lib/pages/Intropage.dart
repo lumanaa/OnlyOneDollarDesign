@@ -14,7 +14,7 @@ class IntroPage extends StatelessWidget {
           child: Column(children: [
             //logo
             Padding(
-              padding: const EdgeInsets.only(top: 100),
+              padding: const EdgeInsets.only(top: 150),
               child: Image.asset('lib/images/logo_onlyonedollar.png'),
             ),
             Padding(
