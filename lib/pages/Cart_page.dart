@@ -209,17 +209,17 @@ class CartPage extends StatelessWidget {
                                   if (cartItem.quantity > 1) {
                                     cartItem
                                         .quantity--; // Decrease the quantity by 1.
-                                    cart;
+                                    cart.notifyListeners();
                                   }
                                 },
                               ),
                               Text(
                                 '${cartItem.quantity}',
                                 style: GoogleFonts.notoSerif(
-                                    color: Colors.deepPurpleAccent,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15,
-                                    ),
+                                  color: Colors.deepPurpleAccent,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                ),
                               ),
                               IconButton(
                                 icon: Icon(
@@ -229,7 +229,7 @@ class CartPage extends StatelessWidget {
                                 onPressed: () {
                                   cartItem
                                       .quantity++; // Increase the quantity by 1.
-                                  cart; 
+                                  cart.notifyListeners();
                                 },
                               ),
                               IconButton(
@@ -252,39 +252,30 @@ class CartPage extends StatelessWidget {
               },
             ),
           ),
+          Text(
+            'Total Price: \$${cart.calculateTotal()}',
+            style: GoogleFonts.notoSerif(
+              color: Colors.deepPurple,
+              fontSize: 20,
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.all(36.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.amber[400],
-                borderRadius: BorderRadius.circular(12),
+            padding: const EdgeInsets.all(20.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber.shade400,
+                elevation: 0,
               ),
-              padding: EdgeInsets.all(24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Total Price: \$${cart.calculateTotal()}',
-                    style: GoogleFonts.notoSerif(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
+              onPressed: () {},
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Checkout',
+                  style: GoogleFonts.notoSerif(
+                    fontSize: 20,
+                    color: Colors.white,
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.amber.shade400,
-                      elevation: 0,
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      'Checkout',
-                      style: GoogleFonts.notoSerif(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           ),

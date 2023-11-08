@@ -40,10 +40,10 @@ class _ShopPageState extends State<ShopPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
                   dataProvider.album[selectedAlbumIndex].name,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.spaceGrotesk(
                     fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,
@@ -72,44 +72,17 @@ class _ShopPageState extends State<ShopPage> {
                 }).toList(),
               ),
               Padding(
-                padding: const EdgeInsets.all(12.0),
-                // child: GestureDetector(
-                //   child: ElevatedButton(
-                //     onPressed: () {
-                //       Album selectedAlbum =
-                //           dataProvider.album[selectedAlbumIndex];
-                //       context.read<Cart>().addItemToCart(selectedAlbum);
-                //       showDialog(
-                //         context: context,
-                //         builder: (context) => AlertDialog(
-                //           backgroundColor: Colors.deepPurple[200],
-                //           title: Text(
-                //             "Added Successfully!",
-                //             style: GoogleFonts.notoSerif(
-                //               color: Colors.white,
-                //             ),
-                //           ),
-                //           content: Text(
-                //             'Check your cart',
-                //             style: GoogleFonts.notoSerif(
-                //               color: Colors.white,
-                //             ),
-                //           ),
-                //         ),
-                //       );
-                //     },
-                //     child: Text(
-                //       "Add to Cart",
-                //       style: GoogleFonts.notoSerif(
-                //         fontSize: 15,
-                //       ),
-                //     ),
-                //     style: ElevatedButton.styleFrom(
-                //       backgroundColor: Colors.deepPurple.shade300,
-                //       elevation: 0,
-                //     ),
-                //   ),
-                // ),
+                padding: const EdgeInsets.only(top: 10.0),
+                child: Text(
+                  'Size: ${dataProvider.album[selectedAlbumIndex].physicalWidth.toString()} x ${dataProvider.album[selectedAlbumIndex].physicalHeight.toString()} (inch)',
+                  style: GoogleFonts.slabo13px(
+                    color: Colors.amber,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
                 child: GestureDetector(
                   child: ElevatedButton(
                     onPressed: () {
