@@ -8,11 +8,11 @@ class DataProvider extends ChangeNotifier {
   List<Album> cart = [];
   List<Album> get album => _album;
   List<String> imageUrls = [];
-  String baseUrl = 'https://v3.explorug.com';
+  String baseUrl = 'https://assets.explorug.com';
 
   Future<void> fetchAlbum() async {
     final response = await http.get(Uri.parse(
-        'https://v3rc.explorug.com/modules/virtualexhibition/virtualexhibition.aspx/?name=emotions'));
+        'https://v3rc.explorug.com/modules/DesignList.aspx?name=only1dollar'));
 
     if (response.statusCode == 200) {
       final List<dynamic> jsonList = json.decode(response.body);
@@ -22,7 +22,13 @@ class DataProvider extends ChangeNotifier {
       // return _album;
 
       imageUrls = _album
-          .map((album) => baseUrl + Uri.encodeFull(album.renderedImageUrl))
+          .map(
+            (album) =>
+                baseUrl +
+                Uri.encodeFull(album.renderedImageUrl.substring(
+                    album.renderedImageUrl.indexOf("/Assets") +
+                        "/Assets".length)),
+          )
           .toList();
     } else {
       print('Failed to fetch data: ${response.statusCode}');
