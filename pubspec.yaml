@@ -34,6 +34,7 @@ dependencies:
   http: ^1.1.0
   coverflow: any
   curved_navigation_bar: any
+  badges: ^3.1.2
     
     
     
@@ -44,6 +45,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   provider: ^6.0.5
+  share: ^2.0.1
+  url_launcher: ^6.0.6
+  popover: ^0.2.8+2
 
   
 

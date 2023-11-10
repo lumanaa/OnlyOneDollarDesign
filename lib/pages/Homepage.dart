@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:onedollar/components/BottomNav.dart';
 import 'package:onedollar/pages/Cart_page.dart';
 import 'package:onedollar/pages/Shop_page.dart';
+import 'package:onedollar/components/share.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -37,6 +38,39 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        actions: [
+          SharePopupMenu(),
+          Center(
+            child: Stack(
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.shopping_cart_outlined,
+                    color: Colors.grey[900],
+                  ),
+                  onPressed: () {
+                    // shopping cart action
+                  },
+                ),
+                Positioned(
+                  top: 8.0,
+                  right: 8.0,
+                  child: CircleAvatar(
+                    radius: 8.0,
+                    backgroundColor: Colors.red,
+                    child: Text(
+                      '0',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
         leading: Builder(
           builder: (context) => IconButton(
             icon: Icon(

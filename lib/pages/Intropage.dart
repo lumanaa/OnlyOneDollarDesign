@@ -142,7 +142,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
+      backgroundColor: Colors.white10,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -151,22 +151,32 @@ class IntroPage extends StatelessWidget {
             children: [
               // Logo
               Padding(
-                padding: const EdgeInsets.only(top: 250),
+                padding: const EdgeInsets.only(top: 180),
                 child: Image.asset(
-                  'lib/images/logo_onlyonedollar.png',
+                  'lib/images/logo_app.png',
+                  height: 200,
                 ),
               ),
-              const SizedBox(height: 90),
+              const SizedBox(height: 45),
+               Text(
+                'Only One Dollar Design',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.spaceGrotesk(
+                  fontSize: 50,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.grey[400],
+                ),
+              ),
+              const SizedBox(height: 30),
               Text(
                 'Choose from the wide range of collection',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.roboto(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[700],
+                style: GoogleFonts.slabo13px(
+                  fontSize: 20,
+                  color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 80),
 
               GestureDetector(
                 onTap: () => Navigator.push(
@@ -175,7 +185,7 @@ class IntroPage extends StatelessWidget {
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[900],
+                    color: Colors.deepPurple[500],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: EdgeInsets.all(25),
