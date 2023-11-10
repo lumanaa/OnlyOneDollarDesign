@@ -157,12 +157,12 @@ class IntroPage extends StatelessWidget {
                   height: 200,
                 ),
               ),
-              const SizedBox(height: 45),
+              const SizedBox(height: 50),
                Text(
                 'Only One Dollar Design',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.spaceGrotesk(
-                  fontSize: 50,
+                  fontSize: 35,
                   fontWeight: FontWeight.w900,
                   color: Colors.grey[400],
                 ),
@@ -172,11 +172,11 @@ class IntroPage extends StatelessWidget {
                 'Choose from the wide range of collection',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.slabo13px(
-                  fontSize: 20,
+                  fontSize: 15,
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 80),
+              const SizedBox(height: 130),
 
               GestureDetector(
                 onTap: () => Navigator.push(

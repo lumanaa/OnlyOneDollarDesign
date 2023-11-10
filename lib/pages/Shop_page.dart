@@ -187,14 +187,14 @@ class _ShopPageState extends State<ShopPage> {
         } else {
           return Column(
             children: [
-              Text(
-                '\$1',
-                style: GoogleFonts.notoSerif(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.amber,
-                ),
-              ),
+              // Text(
+              //   '\$1',
+              //   style: GoogleFonts.notoSerif(
+              //     fontSize: 45,
+              //     fontWeight: FontWeight.bold,
+              //     color: Colors.amber,
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
@@ -326,7 +326,7 @@ class _ShopPageState extends State<ShopPage> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           );
         }
