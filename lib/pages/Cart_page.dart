@@ -175,7 +175,9 @@ class CartPage extends StatelessWidget {
                       Album cartItem = cart.albumList[index];
 
                       String imageUrl = dataProvider.baseUrl +
-                          Uri.encodeFull(cartItem.RenderedImageUrl);
+                          Uri.encodeFull(cartItem.RenderedImageUrl.substring(
+                              cartItem.RenderedImageUrl.indexOf("/Assets") +
+                                  "/Assets".length));
 
                       return Container(
                         decoration: BoxDecoration(
