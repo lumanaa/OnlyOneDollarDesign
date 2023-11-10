@@ -198,7 +198,7 @@ class _ShopPageState extends State<ShopPage> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  dataProvider.album[selectedAlbumIndex].name,
+                  dataProvider.album[selectedAlbumIndex].Name,
                   style: GoogleFonts.spaceGrotesk(
                     fontSize: 25,
                     color: Colors.deepPurple,
@@ -256,7 +256,7 @@ class _ShopPageState extends State<ShopPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 10.0),
                 child: Text(
-                  'Size: ${dataProvider.album[selectedAlbumIndex].physicalWidth.toString()} x ${dataProvider.album[selectedAlbumIndex].physicalHeight.toString()} (inch)',
+                  'Size: ${dataProvider.album[selectedAlbumIndex].PhysicalWidth.toString()} x ${dataProvider.album[selectedAlbumIndex].PhysicalHeight.toString()} (inch)',
                   style: GoogleFonts.slabo13px(
                     color: Colors.amber,
                     fontSize: 18,

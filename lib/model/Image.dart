@@ -1,29 +1,26 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'Image.g.dart';
+
+@JsonSerializable(explicitToJson: true)
 class Album {
-  final String price;
-  final String name;
-  final String renderedImageUrl;
-  final double physicalWidth;
-  final double physicalHeight;
-  final String category;
+  final String Price;
+  final String Name;
+  final String RenderedImageUrl;
+  final double PhysicalWidth;
+  final double PhysicalHeight;
+  final String Category;
 
   int quantity = 1;
+  factory Album.fromJson(Map<String, dynamic> json) => _$AlbumFromJson(json);
 
-  Album({
-    required this.price,
-    required this.name,
-    required this.renderedImageUrl,
-    required this.physicalWidth,
-    required this.physicalHeight,
-    required this.category,
-  });
-  factory Album.fromJson(Map<String, dynamic> json) {
-    return Album(
-      price:json['Price'],
-      name: json['Name'],
-      renderedImageUrl: json['RenderedImageUrl'],
-      physicalWidth: json['PhysicalWidth'].toDouble(),
-      physicalHeight: json['PhysicalHeight'].toDouble(),
-      category: json['Category'],
-    );
-  }
+  Album(
+      {required this.Price,
+      required this.Name,
+      required this.RenderedImageUrl,
+      required this.PhysicalWidth,
+      required this.PhysicalHeight,
+      required this.Category});
+
+  Map<String, dynamic> toJson() => _$AlbumToJson(this);
 }

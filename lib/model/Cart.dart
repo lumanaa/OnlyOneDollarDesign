@@ -69,14 +69,14 @@ class Cart extends ChangeNotifier {
   // Check if the cart contains a specific album based on name and price
   bool containsItem(Album album) {
     return albumList.any((cartItem) =>
-        cartItem.name == album.name && cartItem.price == album.price);
+        cartItem.Name == album.Name && cartItem.Price == album.Price);
   }
 
   // Calculate the total price
   double calculateTotal() {
     double totalPrice = 0.0;
     for (var cartItem in albumList) {
-      double itemPrice = double.parse(cartItem.price) ?? 0;
+      double itemPrice = double.parse(cartItem.Price) ?? 0;
       totalPrice += itemPrice * cartItem.quantity;
     }
     return totalPrice;

@@ -175,7 +175,7 @@ class CartPage extends StatelessWidget {
                       Album cartItem = cart.albumList[index];
 
                       String imageUrl = dataProvider.baseUrl +
-                          Uri.encodeFull(cartItem.renderedImageUrl);
+                          Uri.encodeFull(cartItem.RenderedImageUrl);
 
                       return Container(
                         decoration: BoxDecoration(
@@ -186,13 +186,13 @@ class CartPage extends StatelessWidget {
                         child: ListTile(
                           leading: Image.network(imageUrl),
                           title: Text(
-                            cartItem.name,
+                            cartItem.Name,
                             style: GoogleFonts.notoSerif(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           subtitle: Text(
-                            'Price: \$${cartItem.price}',
+                            'Price: \$${cartItem.Price}',
                             style: GoogleFonts.notoSerif(
                                 // color: Colors.amber,
                                 ),

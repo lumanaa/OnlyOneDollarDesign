@@ -19,8 +19,8 @@ class DesignScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final data = dataProvider.album[index];
               return ListTile(
-                title: Text(data.name),
-                subtitle: Text(data.renderedImageUrl),
+                title: Text(data.Name),
+                subtitle: Text(data.RenderedImageUrl),
               );
             },
           );

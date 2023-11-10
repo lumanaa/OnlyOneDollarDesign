@@ -25,8 +25,8 @@ class DataProvider extends ChangeNotifier {
           .map(
             (album) =>
                 baseUrl +
-                Uri.encodeFull(album.renderedImageUrl.substring(
-                    album.renderedImageUrl.indexOf("/Assets") +
+                Uri.encodeFull(album.RenderedImageUrl.substring(
+                    album.RenderedImageUrl.indexOf("/Assets") +
                         "/Assets".length)),
           )
           .toList();
